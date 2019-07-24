@@ -38,6 +38,7 @@ function CharacterStats(attr){
 }
 
 CharacterStats.prototype.takeDamage = function(){
+  destroy();
   return `${this} took damage.`
 }
 /*
@@ -57,6 +58,8 @@ CharacterStats.prototype.takeDamage = function(){
  }
 
  Humanoid.prototype.greet = function(){
+  destroy();
+  takeDamage();
    return `${this} offers a greeting in ${this.language}`
  }
 /*
