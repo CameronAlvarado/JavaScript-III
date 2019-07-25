@@ -89,7 +89,7 @@ function Villain(attr){
 
 Humanoid.prototype = Object.create(Humanoid.prototype);
 
-Humanoid.prototype.attack = function(){
+Humanoid.prototype.attack2 = function(Hero){
   return `${this.name} attacks ${hero.name} for 3 points. ${hero.name} now has ${hero.healthPoints - 5}hp`
 };
 // Test you work by un-commenting these 3 objects and the list of console logs below:
@@ -181,8 +181,8 @@ const villain = new Humanoid({
   ],
   language: 'Unknown',
 });
-
-console.log(villain.attack());
+console.log(hero.attack());
+console.log(villain.attack2());
 // ----------------------------------------------------------------------------------
 
   console.log(mage.createdAt); // Today's date
