@@ -30,7 +30,7 @@
 //     }
 //   }
   
-//   myGhost.ghost(); //invoking function here
+//   myGhost.ghost();
 // // Principle 3
 
 // // code example for New Binding
@@ -40,7 +40,7 @@
   
 //   let myGhost = new Ghost('Casper the friendly 👻')
   
-//   console.log(myGhost.thing); //function being invoked here.
+//   console.log(myGhost.thing);
 // // Principle 4
 
 // // code example for Explicit Binding
