@@ -70,13 +70,13 @@ Humanoid.prototype.greet = function(){
   * Instances of CharacterStats should have all of the same properties as GameObject.
 */
 function Hero(attr){
-    // Humanoid.call(this, attr);
+    Humanoid.call(this, attr);
     // Villain.call(this, attr);
 };
 
-Humanoid.prototype = Object.create(Humanoid.prototype);
+// Humanoid.prototype = Object.create(Humanoid.prototype);
 
-Humanoid.prototype.attack = function(Villain){
+Humanoid.prototype.attack = function(){
 return `${this.name} attacks ${villain.name} for 5 points. ${villain.name} now has ${villain.healthPoints - 5}hp.`
 };
 
@@ -89,7 +89,7 @@ function Villain(attr){
 
 Humanoid.prototype = Object.create(Humanoid.prototype);
 
-Humanoid.prototype.attack2 = function(Hero){
+Humanoid.prototype.attack2 = function(){
   return `${this.name} attacks ${hero.name} for 3 points. ${hero.name} now has ${hero.healthPoints - 5}hp`
 };
 // Test you work by un-commenting these 3 objects and the list of console logs below:

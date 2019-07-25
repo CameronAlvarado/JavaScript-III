@@ -1,4 +1,4 @@
-/* The for principles of "this";
+/* The four principles of "this";
 * in your own words. explain the four principle for the "this" keyword below.
 *
 * 1. 'this' refers to the context of the containing Object (window object), unless you are in 'strict mode'.
@@ -16,42 +16,42 @@
 //     name: 'Casper',
 //     boo: 'booo 👻',
 //     ghost: function (){
-//       console.log(this.boo);
+      console.log(this.boo);
 //     }
 //   }
-// // Principle 2
+// Principle 2
 
-// // code example for Implicit Binding
-// let myGhost = {
-//     name: 'Casper',
-//     boo: 'booo 👻',
-//     ghost: function (){
-//       console.log(this.boo);
-//     }
-//   }
+// code example for Implicit Binding
+let myGhost = {
+    name: 'Casper',
+    boo: 'booo 👻',
+    ghost: function (){
+      console.log(this.boo);
+    }
+  }
   
-//   myGhost.ghost();
-// // Principle 3
+  myGhost.ghost(); // <-----
+// Principle 3
 
-// // code example for New Binding
-// function Ghost(saying){
-//     this.thing = saying;
-//   }
+// code example for New Binding
+function Ghost(saying){
+    this.thing = saying;
+  }
   
-//   let myGhost = new Ghost('Casper the friendly 👻')
+  let myGhost = new Ghost('Casper the friendly 👻')
   
-//   console.log(myGhost.thing);
-// // Principle 4
+  console.log(myGhost.thing);
+// Principle 4
 
-// // code example for Explicit Binding
-// function ghost(){
-//     console.log(this.boo);
-//   }
+// code example for Explicit Binding
+function ghost(){
+    console.log(this.boo);
+  }
   
-//   const myGhost = {
-//     name: 'Casper',
-//     boo: 'boooooo!'
-//   }
+  const myGhost = {
+    name: 'Casper',
+    boo: 'boooooo!'
+  }
   
-//   ghost.call(myGhost); //invoke the function
-//   ghost.apply(myGhost); // passes an array
+  ghost.call(myGhost); //invoke the function
+  ghost.apply(myGhost); // passes an array
